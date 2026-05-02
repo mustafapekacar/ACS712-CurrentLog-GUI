@@ -20,6 +20,6 @@ Unlike standard serial monitors, this tool provides a professional dark-mode int
   pip install pyserial pandas matplotlib openpyxl customtkinter
 
 <p align="center">
-  <img src="Power_Analyzer_UI.png" alt="Program Interface" width="55%" />
-  <img src="Measurements_Viewer.png" alt="Analysis Graphs" width="40%" />
+  <img src="Power_Analyzer_UI.png" alt="Program Interface" width="10%" />
+  <img src="Measurements_Viewer.png" alt="Analysis Graphs" width="50%" />
 </p>
