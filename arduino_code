@@ -1,0 +1,40 @@
+// ACS712 Current Sensor - Milliampere Measurement Code
+const int sensorPin = A0;   // Analog pin where the sensor is connected
+int offsetVoltage = 2500;   // Sensor outputs 2.5V (2500mV) at 0 Amps
+int sensitivity = 185;      // Sensitivity for 5A model (185 mV/A). (Use 100 for 20A, 66 for 30A)
+
+void setup() {
+  // Setting a high baud rate for fast and delay-free data transfer to Python
+  Serial.begin(115200); 
+}
+
+void loop() {
+  long sum = 0;
+  int sampleCount = 100;
+
+  // Taking 100 samples over 100 milliseconds
+  for(int i = 0; i < sampleCount; i++) {
+    sum += analogRead(sensorPin);
+    delay(1); // Wait for 1 millisecond
+  }
+
+  // Calculate the average of the 100 readings
+  float averageAnalog = sum / (float)sampleCount;
+
+  // Convert analog value (0-1023) to millivolts (0-5000mV)
+  // Arduino Uno's operating voltage is assumed to be 5V (5000mV)
+  float voltage = (averageAnalog / 1023.0) * 5000.0;
+
+  // Find the net voltage change by subtracting the 2500mV offset at 0 Amps
+  float voltageDifference = voltage - offsetVoltage;
+
+  // Calculate current in Amps by dividing by the sensor's sensitivity
+  float currentAmps = voltageDifference / sensitivity;
+
+  // Convert Amps to milliamperes (this value will be used for plotting in Python)
+  float current_mA = currentAmps * 1000.0;
+
+  // Send the cleaned and calculated milliampere value via Serial port
+  // We only send the number so it's easy to catch and process in Python
+  Serial.println(current_mA);
+}
