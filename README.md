@@ -19,5 +19,7 @@ Unlike standard serial monitors, this tool provides a professional dark-mode int
   ```bash
   pip install pyserial pandas matplotlib openpyxl customtkinter
 
-![MilliPowerScope Interface](Power_Analyzer_UI.png)
-[Measurements](Measurements_Viewer.png)
+<p align="center">
+  <img src="Power_Analyzer_UI.png" alt="Program Interface" width="55%" />
+  <img src="Measurements_Viewer.png" alt="Analysis Graphs" width="40%" />
+</p>
