@@ -76,6 +76,11 @@ class MilliPowerScopeApp(ctk.CTk):
             self.voltage = float(self.volt_entry.get())
             self.duration = int(self.duration_entry.get())
             self.port = self.port_entry.get().strip()
+            
+            if not self.port:
+                messagebox.showerror("Input Error", "Please enter a valid COM Port (e.g., COM3).")
+                return
+                
         except ValueError:
             messagebox.showerror("Input Error", "Please enter valid numeric values for Voltage and Duration.")
             return
