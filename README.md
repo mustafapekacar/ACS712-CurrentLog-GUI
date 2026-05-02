@@ -24,4 +24,4 @@ Unlike standard serial monitors, this tool provides a professional dark-mode int
   <img src="media/Measurements_Viewer.png" alt="Analysis Graphs" width="50%" />
 </p>
 ### 🎥 Project Demonstration Video
-[▶️ Click Here to Watch How the Application Works]([VID_20260502_194347.mp4](https://github.com/mustafapekacar/ACS712-CurrentLog-GUI/releases/download/v1.0/VID_20260502_194347.mp4),(https://github.com/mustafapekacar/ACS712-CurrentLog-GUI/releases/download/v1.0/VID_20260502_194543.mp4))
+[▶️ Click Here to Watch How the Application Works]([VID_20260502_194347.mp4](https://github.com/mustafapekacar/ACS712-CurrentLog-GUI/releases/download/v1.0/VID_20260502_194347.mp4))
