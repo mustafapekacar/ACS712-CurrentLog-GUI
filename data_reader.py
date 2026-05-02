@@ -41,16 +41,14 @@ class MilliPowerScopeApp(ctk.CTk):
         self.volt_frame = ctk.CTkFrame(self, fg_color="transparent")
         self.volt_frame.pack(fill="x", padx=40, pady=5)
         ctk.CTkLabel(self.volt_frame, text="Voltage (V):", width=120, anchor="w").pack(side="left")
-        self.volt_entry = ctk.CTkEntry(self.volt_frame, width=150)
-        self.volt_entry.insert(0, "5.0")
+        self.volt_entry = ctk.CTkEntry(self.volt_frame, width=150, placeholder_text="e.g., 5.0")
         self.volt_entry.pack(side="right")
 
         # Duration Input
         self.duration_frame = ctk.CTkFrame(self, fg_color="transparent")
         self.duration_frame.pack(fill="x", padx=40, pady=5)
         ctk.CTkLabel(self.duration_frame, text="Duration (Sec):", width=120, anchor="w").pack(side="left")
-        self.duration_entry = ctk.CTkEntry(self.duration_frame, width=150)
-        self.duration_entry.insert(0, "120")
+        self.duration_entry = ctk.CTkEntry(self.duration_frame, width=150, placeholder_text="e.g., 120")
         self.duration_entry.pack(side="right")
 
         # Progress Bar
