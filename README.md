@@ -18,3 +18,6 @@ Unlike standard serial monitors, this tool provides a professional dark-mode int
 * Required Python libraries:
   ```bash
   pip install pyserial pandas matplotlib openpyxl customtkinter
+
+![MilliPowerScope Interface](Power_Analyzer_UI.png)
+[Measurements](Measurements_Viewer.png)
